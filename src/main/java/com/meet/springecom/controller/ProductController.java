@@ -19,9 +19,7 @@ public class ProductController {
 
     @GetMapping("/products")
     public List<Product> getProducts(){
-        List<Product> products = service.getAllProduct();
-        for(var p : products) System.out.println(p);
-        return products;
+        return service.getAllProduct();
     }
 
     @Autowired
